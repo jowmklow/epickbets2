@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
     EditText entraNom;
     @BindView(R.id.entra_contrasenya_inici)
     EditText entraContra;
-    @BindView(R.id.registra)
-    Button registra;
     @BindView(R.id.inicia_sessio)
     Button iniciaSessio;
     @BindView(R.id.imagenLogo)
@@ -55,15 +52,10 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
         //servidor test
     }
 
-    @OnClick({R.id.registra, R.id.inicia_sessio, R.id.imagenLogo})
+    @OnClick({R.id.inicia_sessio, R.id.imagenLogo})
     public void onViewClicked(View view) {
         Intent i;
         switch (view.getId()) {
-            case R.id.registra:
-                i = new Intent(MainActivity.this, RegistraActivity.class);
-                startActivity(i);
-                finish();
-                break;
             case R.id.inicia_sessio:
                 String deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
                 m = new MyAsyncTask(entraNom.getText().toString(),entraContra.getText().toString(),deviceId,this);
@@ -91,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
         Intent i = new Intent(this, ActionsActivity.class);
         startActivity(i);
     }
-
     @Override
     public void wrong() {
         Snackbar.make(entraContra, "Valores erroneos", Snackbar.LENGTH_LONG).show();

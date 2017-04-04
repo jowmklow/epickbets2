@@ -5,6 +5,6 @@ package com.example.epickpc.epickbets2;
  */
 
 public interface LoginListener {
-    public void ok();
-    public void wrong();
+     void ok();
+     void wrong();
 }

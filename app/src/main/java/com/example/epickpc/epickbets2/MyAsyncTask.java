@@ -1,14 +1,11 @@
 package com.example.epickpc.epickbets2;
 
-import android.content.Intent;
 import android.os.StrictMode;
-import android.provider.Settings;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;

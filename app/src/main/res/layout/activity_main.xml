@@ -4,6 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackepick"
     tools:context="com.example.epickpc.epickbets.MainActivity">
 
     <LinearLayout
@@ -18,34 +19,16 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="26dp">
 
-        <TextView
-            android:text="Nom d'usuari"
-            android:textSize="20dp"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <EditText
             android:id="@+id/entra_nom_inici"
-            android:textSize="20dp"
-
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="Contrasenya"
-            android:textSize="20dp"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/entra_contrasenya_inici"
-            android:textSize="20dp"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:hint="@string/user"
+            android:shadowColor="@color/colorAccent"
+            android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -53,38 +36,24 @@
         android:orientation="horizontal"
         android:layout_width="357dp"
         android:layout_height="97dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="15dp"
         android:id="@+id/linearLayout2"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
-
-        <Button
-            android:id="@+id/registra"
-            android:text="REGISTRATE"
-            android:layout_width="134dp"
-            android:layout_height="60dp"
-
-
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/colorAccent"
-            android:fadingEdge="vertical"
-            android:layout_marginBottom="148dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/entra"
-            android:layout_marginStart="20dp" />
+        android:layout_alignStart="@+id/imagenLogo"
+        android:textColor="@color/colorAccent"
+        android:layout_marginStart="38dp">
 
         <Button
             android:id="@+id/inicia_sessio"
-            android:text="ENTRAR"
-            android:layout_height="60dp"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:background="@color/colorAccent"
-            android:layout_marginStart="42dp"
+            android:layout_width="134dp"
+            android:layout_height="60dp"
             android:layout_alignBaseline="@+id/registra"
             android:layout_alignBottom="@+id/registra"
             android:layout_alignParentStart="true"
-            android:layout_width="134dp" />
-
+            android:layout_marginStart="42dp"
+            android:background="@color/colorAccent"
+            android:text="ENTRAR" />
     </LinearLayout>
 
     <ImageView
@@ -96,5 +65,17 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:id="@+id/entra_contrasenya_inici"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
 </RelativeLayout>
 

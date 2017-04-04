@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">epickbets2</string>
+    <string name="user">User Name</string>
 </resources>
