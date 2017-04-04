@@ -41,7 +41,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:textColor="@color/colorAccent"
-                android:backgroundTint="#FFFFFF"/>
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorlogin"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -60,7 +61,9 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:backgroundTint="@color/colorlogin"/>
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
