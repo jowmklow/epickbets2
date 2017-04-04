@@ -5,7 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackepick"
-    tools:context="com.example.epickpc.epickbets.MainActivity">
+    tools:context="com.example.epickpc.epickbets2.MainActivity">
+
+    <ImageView
+        android:id="@+id/imagenLogo"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="200dp"
+        android:src="@drawable/epickbets_tittle" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,63 +28,62 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="26dp">
 
-        <EditText
-            android:id="@+id/entra_nom_inici"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/user"
-            android:shadowColor="@color/colorAccent"
-            android:textColor="@color/colorAccent"
-            android:textColorHighlight="@color/colorAccent"
-            android:textColorHint="@color/colorAccent"
-            android:textSize="20dp" />
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/entra_nom_inici"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:hint="@string/user"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="#FFFFFF"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/entra_contrasenya_inici"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
-        android:layout_width="357dp"
-        android:layout_height="97dp"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/linearLayout2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/imagenLogo"
-        android:textColor="@color/colorAccent"
-        android:layout_marginStart="38dp">
-
-        <Button
-            android:id="@+id/inicia_sessio"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="134dp"
-            android:layout_height="60dp"
-            android:layout_alignBaseline="@+id/registra"
-            android:layout_alignBottom="@+id/registra"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="42dp"
-            android:background="@color/colorAccent"
-            android:text="ENTRAR" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imagenLogo"
-        android:layout_width="293dp"
-        android:layout_height="124dp"
-        android:maxHeight="200dp"
-        android:src="@drawable/epickbets_tittle"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:id="@+id/entra_contrasenya_inici"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
+
+        android:id="@+id/linearLayout2"
         android:textColor="@color/colorAccent"
-        android:textSize="20dp"
-        android:layout_marginTop="18dp"
         android:layout_below="@+id/linearLayout"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+    <Button
+        android:id="@+id/inicia_sessio"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:text="ENTRAR"/>
+    </RelativeLayout>
 </RelativeLayout>
 

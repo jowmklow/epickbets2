@@ -62,7 +62,7 @@ public class MyAsyncTask{
                 wr.close();
 
                 int responseCode = con.getResponseCode();
-                Log.d("Valores introducidos:", "\nUser" + nombre + ", Password: " + pass + "");
+                Log.d("Valores introducidos:", "\nUser: " + nombre + ", Password: " + pass + "");
                 Log.d("", "\nSending 'POST' request to URL : " + url);
                 Log.d("", "Post parameters : " + urlParameters);
                 Log.d("", "Response Code : " + responseCode);

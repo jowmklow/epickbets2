@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,10 +26,8 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
     Button iniciaSessio;
     @BindView(R.id.imagenLogo)
     ImageView imagenLogo;
-    boolean error = false;
     Activity c;
     MyAsyncTask m;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         c = this;
-
-
 
         ConnectivityManager cManager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
         NetworkInfo nInfo = cManager.getActiveNetworkInfo();
@@ -51,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
             }
         //servidor test
     }
-
     @OnClick({R.id.inicia_sessio, R.id.imagenLogo})
     public void onViewClicked(View view) {
         Intent i;
@@ -73,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
                 finish();
                 break;
         }
-
-
 
     }
 
