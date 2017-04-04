@@ -5,9 +5,8 @@
     android:background="@color/colorBackepick">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/texto"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:text="Test entra"
         android:textSize="50dp"

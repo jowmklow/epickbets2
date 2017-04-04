@@ -30,7 +30,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel">
 
             <AutoCompleteTextView
                 android:id="@+id/entra_nom_inici"
@@ -42,14 +43,13 @@
                 android:maxLines="1"
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent"
-                android:backgroundTint="@color/colorlogin"/>
-
+                android:backgroundTint="#FFFFFF"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:theme="@style/TextLabel">
             <AutoCompleteTextView
                 android:id="@+id/entra_contrasenya_inici"
                 android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:maxLines="1"
                 android:textColor="@color/colorAccent"
                 android:textColorHint="@color/colorAccent"
-                android:backgroundTint="@color/colorlogin"/>
+                android:backgroundTint="#FFFFFF"/>
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
@@ -86,7 +86,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
-        android:text="ENTRAR"/>
+        android:text="Enter"/>
     </RelativeLayout>
 </RelativeLayout>
 

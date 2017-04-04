@@ -5,4 +5,6 @@
     <color name="colorAccent">#f1b725</color>
     <color name="colorBackepick">#14161d</color>
     <color name="colorlogin">#FFFFFF</color>
+    <color name="textColorHint">#f1b725</color>
+
 </resources>
