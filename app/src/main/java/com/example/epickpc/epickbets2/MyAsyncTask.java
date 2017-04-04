@@ -1,7 +1,9 @@
 package com.example.epickpc.epickbets2;
 
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -103,6 +105,7 @@ public class MyAsyncTask{
                 Log.d("", "\nResponse Code : " + responseCode);
                 Log.d("", "" + response);
 
+
                 if ((object.getBoolean("result")) == false) {
                     //Log.d("","Valores erroneos");
                     //Snackbar.make(, "Valores erroneos", Snackbar.LENGTH_LONG).show();
@@ -127,6 +130,5 @@ public class MyAsyncTask{
             }
         }
     };
-
 
 }

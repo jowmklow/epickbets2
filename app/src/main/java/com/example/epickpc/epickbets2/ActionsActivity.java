@@ -6,17 +6,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+
 public class ActionsActivity extends AppCompatActivity{
-    TextView texto;
+    TextView tnombre;
+    TextView tmovil;
+    Boolean pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actions);
-    texto = (TextView) findViewById(R.id.texto);
-    }
 
-    public void Cambia_texto(View v){
-        texto.setText("Username= ");
-    }
+    tnombre = (TextView) findViewById(R.id.tnombre);
+        tnombre.setText(getIntent().getExtras().getString("username"));
+    tmovil = (TextView) findViewById(R.id.tmovil);
 
+
+
+    }
+    public void cambiaTexto(View v){
+
+        tnombre.setText("Username= ");
+        tmovil.setText("Device ID= ");
+    }
 }

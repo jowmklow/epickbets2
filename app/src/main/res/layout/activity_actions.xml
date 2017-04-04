@@ -1,16 +1,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackepick">
+    android:background="@color/colorBackepick"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/texto"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test entra"
-        android:textSize="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="185dp" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp"
+            android:text=""
+            android:textSize="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tmovil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp"
+            android:text=""
+            android:textSize="50dp" />
+    </LinearLayout>
+
+
 </RelativeLayout>

@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
     ImageView imagenLogo;
     Activity c;
     MyAsyncTask m;
+    TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
             }
         //servidor test
     }
+
+
     @OnClick({R.id.inicia_sessio, R.id.imagenLogo})
     public void onViewClicked(View view) {
         Intent i;
@@ -59,7 +64,9 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
                         if (error) {
                             Toast.makeText(MainActivity.this, "Combinación Errónea", Toast.LENGTH_LONG).show();
                         }*/
+
                      m.run();
+
                 break;
             case R.id.imagenLogo:
                 i = new Intent(MainActivity.this, MainActivity.class);
@@ -70,9 +77,11 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
 
     }
 
+
     @Override
     public void ok() {
         Intent i = new Intent(this, ActionsActivity.class);
+        i.putExtra("username",entraNom.getText().toString());
         startActivity(i);
     }
     @Override
