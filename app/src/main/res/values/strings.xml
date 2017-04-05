@@ -3,7 +3,7 @@
     <string name="user">User Name</string>
     <string name="password">Password</string>
     <string name="title_activity_login">Sign in</string>
-
+    <string name="save">Save Login?</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
