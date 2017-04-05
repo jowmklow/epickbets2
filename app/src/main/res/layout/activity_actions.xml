@@ -10,25 +10,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:maxHeight="200dp"
-        android:src="@drawable/epickbets_tittle" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
+        android:src="@drawable/epickbets_tittle"
+        android:contentDescription="@string/logo_2" />
 
     <TextView
         android:id="@+id/tnombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
-        android:textSize="25dp"
+        android:text="@string/name"
+        android:textSize="25sp"
         android:layout_below="@+id/imagenLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp" />
@@ -38,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="107dp"
-        android:text="password"
-        android:textSize="25dp"
+        android:text="@string/password_name"
+        android:textSize="25sp"
         android:layout_below="@+id/tnombre"
         android:layout_centerHorizontal="true" />
 
@@ -47,8 +37,8 @@
         android:id="@+id/tdeviceId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="device"
-        android:textSize="25dp"
+        android:text="@string/device"
+        android:textSize="25sp"
         android:layout_marginBottom="43dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

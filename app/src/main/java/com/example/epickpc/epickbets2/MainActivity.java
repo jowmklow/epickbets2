@@ -3,6 +3,7 @@ package com.example.epickpc.epickbets2;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -20,10 +22,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements LoginListener {
-    /*private CheckBox saveLoginCheckBox;
+    private CheckBox saveLoginCheckBox;
     private SharedPreferences loginPreferences;
     private SharedPreferences.Editor loginPrefsEditor;
-    private Boolean saveLogin;*/
+    private Boolean saveLogin;
     @BindView(R.id.entra_nom_inici)
     EditText entraNom;
     @BindView(R.id.entra_contrasenya_inici)
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         c = this;
-        /*saveLoginCheckBox = (CheckBox)findViewById(R.id.saveLoginCheckBox);
+        saveLoginCheckBox = (CheckBox) findViewById(R.id.saveLoginCheckBox);
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         loginPrefsEditor = loginPreferences.edit();
         saveLogin = loginPreferences.getBoolean("saveLogin", false);
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
             entraNom.setText(loginPreferences.getString("username", ""));
             entraContra.setText(loginPreferences.getString("password", ""));
             saveLoginCheckBox.setChecked(true);
-        }*/
+        }
 
         ConnectivityManager cManager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
         NetworkInfo nInfo = cManager.getActiveNetworkInfo();
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
                     InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(entraNom.getWindowToken(), 0);
 
-                    /*if (saveLoginCheckBox.isChecked()) {
+                    if (saveLoginCheckBox.isChecked()) {
                         loginPrefsEditor.putBoolean("saveLogin", true);
                         loginPrefsEditor.putString("username", entraNom.getText().toString());
                         loginPrefsEditor.putString("password", entraContra.getText().toString());
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
                         loginPrefsEditor.clear();
                         loginPrefsEditor.commit();
                     }
-                    doSomethingElse();*/
+
                 }
 
 
@@ -119,8 +121,5 @@ public class MainActivity extends AppCompatActivity implements LoginListener {
     public void wrong() {
         Snackbar.make(entraContra, "Valores erroneos", Snackbar.LENGTH_LONG).show();
     }
-    /*public void doSomethingElse() {
-        startActivity(new Intent(MainActivity.this, ActionsActivity.class));
-        MainActivity.this.finish();
-    }*/
+
 }

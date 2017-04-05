@@ -22,10 +22,8 @@ public class ActionsActivity extends AppCompatActivity{
         tmovil = (TextView) findViewById(R.id.tmovil);
         tmovil.setText("Password: " + getIntent().getExtras().getString("password"));
 
-
         String id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         //displaying id in textview
-
         tv = (TextView) findViewById(R.id.tdeviceId);
         tv.setText("Token ID: " + id);
     }

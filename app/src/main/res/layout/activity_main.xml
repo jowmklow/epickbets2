@@ -14,7 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:maxHeight="200dp"
-        android:src="@drawable/epickbets_tittle" />
+        android:src="@drawable/epickbets_tittle"
+        android:contentDescription="@string/logo_1" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -26,7 +27,8 @@
         android:weightSum="1"
         android:layout_below="@+id/imagenLogo"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp">
+        android:layout_marginTop="26dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -86,7 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="@string/save"
-            android:textColor="#FFF" />
+            android:textColor="#FFF"
+            tools:ignore="RtlHardcoded" />
 
         <Button
             android:id="@+id/inicia_sessio"
@@ -96,7 +99,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@color/colorAccent"
-            android:text="Enter"/>
+            android:text="@string/enter" />
     </RelativeLayout>
 </RelativeLayout>
 
