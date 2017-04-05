@@ -1,9 +1,7 @@
 package com.example.epickpc.epickbets2;
 
-import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
-import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,6 +22,7 @@ public class MyAsyncTask{
     private String pass;
     private String deviceId;
     private LoginListener l;
+
 
     public MyAsyncTask(String nombre, String pass, String d, LoginListener l) {
         this.nombre = nombre;
@@ -109,7 +108,7 @@ public class MyAsyncTask{
                 if ((object.getBoolean("result")) == false) {
                     //Log.d("","Valores erroneos");
                     //Snackbar.make(, "Valores erroneos", Snackbar.LENGTH_LONG).show();
-                    Log.e("Introduccion de", "Valores erroneos");
+                    Log.e("Introduccion de ", "Valores erroneos");
                     l.wrong();
                 } else {
                     l.ok();
@@ -119,6 +118,7 @@ public class MyAsyncTask{
                     //startActivity(i);
 
                 }
+
             } catch (ProtocolException e) {
                 e.printStackTrace();
             } catch (MalformedURLException e) {
@@ -128,7 +128,8 @@ public class MyAsyncTask{
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }
-    };
 
+        }
+
+    };
 }

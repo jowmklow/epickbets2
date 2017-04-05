@@ -78,15 +78,25 @@
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp">
-    <Button
-        android:id="@+id/inicia_sessio"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
-        android:text="Enter"/>
+
+        <CheckBox
+            android:buttonTint="@color/colorAccent"
+            android:id="@+id/saveLoginCheckBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/save"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/inicia_sessio"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:text="Enter"/>
     </RelativeLayout>
 </RelativeLayout>
 
