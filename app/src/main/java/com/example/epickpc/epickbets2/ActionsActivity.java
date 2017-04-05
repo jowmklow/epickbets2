@@ -4,10 +4,11 @@ package com.example.epickpc.epickbets2;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 
-public class ActionsActivity extends AppCompatActivity{
+public class ActionsActivity extends AppCompatActivity {
     TextView tnombre;
     TextView tmovil;
     TextView tv;
